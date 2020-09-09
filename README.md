@@ -30,8 +30,9 @@ and "reminder to pay electricity bill" will appear in a trello board called `Int
 
 ## ROADMAP
 
-1. Adding labels to your logues so they are automatically sorted when you open your trello board at the end of the day
-2. Creating a similar tool which uses google docs instead of trello.
+[] Adding labels to your logues so they are automatically sorted when you open your trello board at the end of the day
+[] Creating a similar tool which uses google docs instead of trello.
 
+*Inspired by an idea by Srihari Radhakrishna(n?)
 
 
