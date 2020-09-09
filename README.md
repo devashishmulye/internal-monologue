@@ -26,7 +26,7 @@ Simply go to your terminal window and type
 
 		logue reminder to pay electricity bill
 
-and it will appear in a trello board called `Internal Monologue`
+and "reminder to pay electricity bill" will appear in a trello board called `Internal Monologue`
 
 ## ROADMAP
 
