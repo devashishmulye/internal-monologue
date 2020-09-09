@@ -3,7 +3,7 @@ All developers work on difficult projects that need focus.
 All developers get numerous random thoughts in the middle of it.
 All developers always have their terminal open.
 
-Internal Monologue is a single-command cli tool that enables developers to swiftly log their random unrelated thoughts with minimum cognitive diversion. They can then later check these thoughts in a Trello Board when they have the time.
+Internal Monologue is a single-command cli tool that enables developers to swiftly log their random unrelated thoughts via their terminal with minimum cognitive diversion. They can then later check these thoughts in a Trello Board when they have the time.
 
 
 
