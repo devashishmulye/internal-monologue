@@ -1,5 +1,5 @@
 # internal-monologue
-Internal Monologue is a  single-command command line tool for developers to quickly log what may randomly appear in their mind while they are in the middle of an  important task and don't want to log that thought with the minimum cognitive diversion possible. You can log your thoughts via your terminal and finally see them all in Trello at the end of the day.
+All developers always have a terminal window open. Internal Monologue is a single-command cli tool that enables you to log your thoughts via your terminal and finally see them all in a Trello Board at the end of the day. You can use to swiftly log what may randomly appear in your mind with minimum cognitive diversion possible while you are in the middle of an important task. 
 
 
 ## How to set up internal monologue
