@@ -21,9 +21,9 @@ You can use internal monologue by 3 easy steps.
 		export TEMPORARY_TRELLO_TOKEN="<YOU_TEMPORARY_TRELLO_TOKEN>"
 
 
-3. Copy the executable file to your bin
+3. Install the pip package for internalmonologue
 
-		cp dist/logue ~/bin/logue
+		pip3 install internalmonologue
 
 ## How to use
 
