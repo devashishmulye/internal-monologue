@@ -1,4 +1,3 @@
-#!/Users/finboxuser1/devashishwork/internal-monologuetest/monologueenv/bin/python
 
 from datetime import datetime
 import requests
@@ -54,7 +53,7 @@ def get_internal_monologue_board():
             board_id = board["id"]
             url = board['shortUrl']
             save_board_id_in_local(board_id,url)
-            print "This logue is taking longer, since it is also getting info on the resources required."
+            print ("This logue is taking longer, since it is also getting info on the resources required.")
             return board_id, url
     return None, None
 
@@ -68,9 +67,9 @@ def create_board():
     response = requests.request("POST", url, params=querystring)
     board_id = response.json()["id"]
     url = response.json()["shortUrl"]
-    print "Creating a Board for you by the name {}. This is a one-time thing.".format(BOARD_NAME)
-    print "You can view the board here {}".format(url)
-    print "The first logue takes longer, since it is also creating the resources required"
+    print ("Creating a Board for you by the name {}. This is a one-time thing.".format(BOARD_NAME))
+    print ("You can view the board here {}".format(url))
+    print ("The first logue takes longer, since it is also creating the resources required")
     save_board_id_in_local(board_id,url)
     return board_id, url
 
@@ -150,7 +149,7 @@ def process_input(input_string):
     return True
 
 
-if __name__ == '__main__':
+def main():
     input_string = ''
     for ind, arg in enumerate(sys.argv):
         if ind == 0:
@@ -161,10 +160,15 @@ if __name__ == '__main__':
             input_string += ' ' + str(arg)
 
     if input_string == 'dashboard':
-        print "You trello board name is {}.".format(BOARD_NAME)
-        print "You can view the board here {}".format(URL)
+        print ("You trello board name is {}.".format(BOARD_NAME))
+        print ("You can view the board here {}".format(URL))
     else:
         process_input(input_string)
+
+
+if __name__ == '__main__':
+    main()
+
 
 
 
