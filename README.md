@@ -1,5 +1,10 @@
 # internal-monologue
-Internal Monologue is a tool for developers to quickly log what may randomly appear in their mind while they are in the middle of an otherwise important task. You can log your thoughts via the terminal and finally see them all in Trello at the end of the day.
+All developers work on difficult projects that need focus.
+All developers get numerous random thoughts in the middle of it.
+All developers always have their terminal open.
+
+Internal Monologue is a single-command cli tool that enables developers to swiftly log their random unrelated thoughts via their terminal with minimum cognitive diversion. They can then later check these thoughts in a Trello Board when they have the time.
+
 
 
 ## How to set up internal monologue
@@ -26,12 +31,14 @@ Simply go to your terminal window and type
 
 		logue reminder to pay electricity bill
 
-and it will appear in a trello board called `Internal Monologue`
+and "reminder to pay electricity bill" will appear in a trello board called `Internal Monologue`
 
 ## ROADMAP
 
-1. Adding labels to your logues so they are automatically sorted when you open your trello board at the end of the day
-2. Creating a similar tool which uses google docs instead of trello.
+- [ ] Adding labels to your logues so they are automatically sorted when you open your trello board at the end of the day
+- [ ] Creating a similar tool which uses google docs instead of trello.
 
+
+*Inspired by an idea by Srihari Radhakrishna(n?)*
 
 
