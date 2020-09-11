@@ -10,6 +10,7 @@ Internal Monologue is a single-command cli tool that enables developers to swift
 ## How to set up internal monologue
 You can use internal monologue by 3 easy steps.
 
+(You have to be logged into your trello account to see below linked accounts)
 1. Generate your [Trello API Key](https://trello.com/app-key) and [Trello Temporary Token](https://trello.com/1/authorize?expiration=never&scope=read,write,account&response_type=token&name=Server%20Token&key=efbd634e254c0250a96e4ac948616f12).
 
 *You can use the temporary trello token since this app works completely on your local and its only for your own personal use. There is no server. The source code is also available in the repo if you would like to check how it works under the hood*
