@@ -24,7 +24,7 @@ You can use internal monologue by 3 easy steps.
 
 3. Install the pip package for internalmonologue
 
-		pip3 install internalmonologue
+		pip install internalmonologue
 
 ## How to use
 
