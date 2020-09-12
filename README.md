@@ -22,9 +22,9 @@ You can use internal monologue by 3 easy steps.
 
 3. export your credentials in your bash_profile in the following way
 
-Open your bash_profile
+Open your bash_profile with the following command
 
-        sudo vi ~/.bash_profile
+            sudo vi ~/.bash_profile
 
 Then add the following commands to it
 
