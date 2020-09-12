@@ -10,21 +10,28 @@ Internal Monologue is a single-command cli tool that enables developers to swift
 ## How to set up internal monologue
 You can use internal monologue by 3 easy steps.
 
+1. Install the pip package for internalmonologue
+
+		pip install internalmonologue
+
+
+2. Generate your [Trello API Key](https://trello.com/app-key) and [Trello Temporary Token](https://trello.com/1/authorize?expiration=never&scope=read,write,account&response_type=token&name=Server%20Token&key=efbd634e254c0250a96e4ac948616f12).
 (You have to be logged into your trello account to see below linked accounts)
-1. Generate your [Trello API Key](https://trello.com/app-key) and [Trello Temporary Token](https://trello.com/1/authorize?expiration=never&scope=read,write,account&response_type=token&name=Server%20Token&key=efbd634e254c0250a96e4ac948616f12).
 
 *You can use the temporary trello token since this app works completely on your local and its only for your own personal use. There is no server. The source code is also available in the repo if you would like to check how it works under the hood*
 
-2. export your credentials in your bash_profile in the following way
+3. export your credentials in your bash_profile in the following way
+
+Open your bash_profile
+
+        sudo vi ~/.bash_profile
+
+Then add the following commands to it
 
 		export TRELLO_API_KEY="<YOUR_TRELLO_API_KEY_HERE>"
 
 		export TEMPORARY_TRELLO_TOKEN="<YOU_TEMPORARY_TRELLO_TOKEN>"
 
-
-3. Install the pip package for internalmonologue
-
-		pip install internalmonologue
 
 ## How to use
 
