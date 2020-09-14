@@ -20,6 +20,17 @@ if API_KEY is None or TEMPORARY_TOKEN is None:
     print ("Please export TRELLO_API_KEY and TEMPORARY_TRELLO_TOKEN in your environment variables")
     print ("Refer to README for the 2 easy steps")
 
+def error_response(response,api_name):
+    if response.status_code not in (200,201):
+        print (response.text)
+        print ("API KEY - {}".format(API_KEY))
+        print ("TEMPORARY TRELLO TOKEN - {}".format(TEMPORARY_TOKEN))
+        print ("Looks like there is something wrong in the {} API. If you are feeling kind, let Devashish know. Logs are printed above for more info".format(api_name))
+        raise Exception()
+
+
+
+
 def save_board_id_in_local(board_id,url):
     with open(BOARD_ID_JSON, "w") as board_id_dict:
         json.dump({"board_id": board_id,"url":url}, board_id_dict)
@@ -41,7 +52,7 @@ def list_board_ids():
     querystring = {"key": API_KEY,
                    "token": TEMPORARY_TOKEN}
     response = requests.request("GET", url, params=querystring)
-    # print response.text
+    error_response(response,"list_boards")
     boards = response.json()
     return boards
 
@@ -59,12 +70,12 @@ def get_internal_monologue_board():
 
 
 
-
 def create_board():
     url = "https://api.trello.com/1/boards"
     board_name = BOARD_NAME
     querystring = {"name": board_name, "key": API_KEY, "token": TEMPORARY_TOKEN}
     response = requests.request("POST", url, params=querystring)
+    error_response(response,"create_board")
     board_id = response.json()["id"]
     url = response.json()["shortUrl"]
     print ("Creating a Board for you by the name {}. This is a one-time thing.".format(BOARD_NAME))
@@ -97,6 +108,7 @@ def create_todays_list():
     url = "https://api.trello.com/1/lists"
     querystring = {"name":list_name,"idBoard":BOARD_ID,"key":API_KEY,"token":TEMPORARY_TOKEN}
     response = requests.request("POST", url, params=querystring)
+    error_response(response,"Create List")
     list_id = response.json()["id"]
     return list_id
 
@@ -105,7 +117,9 @@ def create_card(list_id, input_string):
     url = "https://api.trello.com/1/cards"
     querystring = {"idList": list_id, "key": API_KEY, "token": TEMPORARY_TOKEN, "name": input_string}
     response = requests.request("POST", url, params=querystring)
+    error_response(response,"create_card")
     return True
+
 
 def get_list_name():
     today_date = datetime.now()
@@ -125,18 +139,14 @@ def check_if_list_exists():
 
 
 
-
 def get_all_trello_lists():
     url = "https://api.trello.com/1/boards/{}/lists".format(BOARD_ID)
     querystring = {"cards": "none", "key": API_KEY,
                    "token": TEMPORARY_TOKEN}
     response = requests.request("GET", url, params=querystring)
-
-    # print response.text
-
+    error_response(response,"get_lists")
     response_json = response.json()
     return response_json
-
 
 
 

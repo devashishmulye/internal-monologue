@@ -5,8 +5,8 @@ with open("README.md", "r") as fh:
 
 
 setuptools.setup(
-    name="internalmonologue", # Replace with your own username
-    version="0.0.11",
+    name="internalmonologue",
+    version="0.0.12",
     author="Devashish Mulye",
     author_email="devashish.mulye@gmail.com",
     description="Internal Monologue will help you journal",
