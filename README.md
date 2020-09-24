@@ -1,3 +1,7 @@
+[![Downloads](https://pepy.tech/badge/internalmonologue)](https://pepy.tech/project/internalmonologue)
+[![Downloads](https://pepy.tech/badge/internalmonologue/month)](https://pepy.tech/project/internalmonologue/month)
+[![Downloads](https://pepy.tech/badge/internalmonologue/week)](https://pepy.tech/project/internalmonologue/week)
+
 # internal-monologue
 All developers work on difficult projects that need focus.
 All developers get numerous random thoughts in the middle of it.
