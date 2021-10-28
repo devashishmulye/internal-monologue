@@ -13,10 +13,7 @@ SCOPES = ['https://www.googleapis.com/auth/documents']
 
 load_dotenv()
 
-def main():
-    """Shows basic usage of the Docs API.
-    Prints the title of a sample document.
-    """
+def auth():
     creds = None
     # The file token.json stores the user's access and refresh tokens, and is
     # created automatically when the authorization flow completes for the first
@@ -34,10 +31,14 @@ def main():
         # Save the credentials for the next run
         with open('token.json', 'w') as token:
             token.write(creds.to_json())
+    return creds
 
+def main():
+    """Shows basic usage of the Docs API.
+    Prints the title of a sample document.
+    """
+    creds = auth()
     service = build('docs', 'v1', credentials=creds)
-
-
 
     # The ID of a sample document.
     DOCUMENT_ID = os.getenv("DOCUMENT_ID")
