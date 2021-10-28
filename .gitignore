@@ -4,3 +4,4 @@ env/
 token.pickle
 credentials.json
 .vscode/
+.venv/
