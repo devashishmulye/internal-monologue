@@ -1,7 +1,7 @@
 *.pickle
+token.json
 credentials.json
+.env
 env/
-token.pickle
-credentials.json
 .vscode/
 .venv/
